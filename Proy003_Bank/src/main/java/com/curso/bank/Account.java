@@ -16,11 +16,23 @@ public class Account {
 
 
 	public boolean deposit(double amt) {
-		return  true;
+		
+		if(amt < 0) {
+			throw new RuntimeException("Por favor, introduzca una cantidad permitida");
+		}
+		balance = balance + amt;
+		return true;
 	}
 	
 	public boolean withdraw(double amt) {
-		return  true;
+		
+		boolean retirado = false; 
+		
+		if(amt < balance) {
+			balance = balance - amt;
+			retirado = true;
+		}
+		return retirado;
 	}
 	
 }
