@@ -85,4 +85,8 @@ public class TresEnRaya {
 		}
 	}
 	
+	private boolean comprobarFichaH() {
+		
+	}
+	
 }

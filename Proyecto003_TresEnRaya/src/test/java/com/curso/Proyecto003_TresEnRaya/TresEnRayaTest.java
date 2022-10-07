@@ -123,4 +123,34 @@ public class TresEnRayaTest {
 		}
 	}
 
+	
+	@Test 
+	public void SiConectaTresFichasHorizonatl() {
+		TresEnRaya juego = new TresEnRaya();
+		juego.jugar(0, 0); 
+		juego.jugar(0, 1);
+		juego.jugar(0, 2); 
+		
+		
+		/*if (juego.) {
+			
+		}*/
+		
+	}
+	
+	@Test 
+	public void SiConectaTresFichasVertical() {
+		TresEnRaya juego = new TresEnRaya();
+		juego.jugar(0, 0); 
+		
+		
+	}
+	
+	@Test 
+	public void SiConectaTresFichasDiagonal() {
+		TresEnRaya juego = new TresEnRaya();
+		
+		
+	}
+	
 }
