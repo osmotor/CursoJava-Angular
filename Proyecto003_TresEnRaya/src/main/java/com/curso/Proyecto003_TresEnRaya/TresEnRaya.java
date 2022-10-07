@@ -12,10 +12,16 @@ public class TresEnRaya {
 	//atributos
 	
 	private Character[][] tablero;
+	private Character jugadorActual;
 	
+	public Character getJugadorActual() {
+		return jugadorActual;
+	}
+
 	//constructor
 	public TresEnRaya() {
 		this.tablero = new Character[3][3]; //todas las casillas tendra null
+		this.jugadorActual = 'X';
 	}
 	
 	//metodos
@@ -70,7 +76,13 @@ public class TresEnRaya {
 			throw new RuntimeException(" Ya hay una ficha en esta pocicion");
 		}
 		
-		tablero [x][y]= 'X';
+		tablero [x][y]= this.jugadorActual;
+		
+		if (this.jugadorActual == 'X') {
+			this.jugadorActual = 'O';
+		}else {
+			this.jugadorActual = 'X';
+		}
 	}
 	
 }

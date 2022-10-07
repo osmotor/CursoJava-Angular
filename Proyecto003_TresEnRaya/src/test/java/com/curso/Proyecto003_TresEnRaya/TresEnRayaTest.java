@@ -90,5 +90,37 @@ public class TresEnRayaTest {
 		}
 		
 	}
+	
+	@Test
+	public void primerJugadorEsX() {
+		TresEnRaya juego = new TresEnRaya();
+		
+		
+		if (juego.getJugadorActual() != 'X') {
+			fail("El primer jugador ebe ser X ");
+		}
+	}
+	
+	
+	@Test
+	public void siAnteriorJugadorEsXAhoraEsO() {
+		TresEnRaya juego = new TresEnRaya();
+		juego.jugar(0, 0); 
+		
+		if (juego.getJugadorActual() != 'O') {
+			fail("El jugador ebe ser O ");
+		}
+	}
+	
+	@Test
+	public void siAnteriorJugadorEsOAhoraEsX() {
+		TresEnRaya juego = new TresEnRaya();
+		juego.jugar(0, 0); 
+		juego.jugar(0, 2);
+		
+		if (juego.getJugadorActual() != 'X') {
+			fail("El jugador ebe ser X ");
+		}
+	}
 
 }
